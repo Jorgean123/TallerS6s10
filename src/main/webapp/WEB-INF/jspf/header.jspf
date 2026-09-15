@@ -1,0 +1,23 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
+<%@ taglib prefix="fmt" uri="jakarta.tags.fmt" %>
+<fmt:setLocale value="es_PE" />
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title><c:out value="${titulo}" /> | UTP · Taller 06</title>
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/bootstrap.min.css">
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/app.css">
+</head>
+<body>
+<header class="site-header"><div class="container d-flex align-items-center justify-content-between flex-wrap gap-3 py-3">
+  <a class="brand" href="${pageContext.request.contextPath}/"><span class="brand-mark">UTP</span><span>Desarrollo Web Integrado<small>LABORATORIO DE APLICACIÓN</small></span></a>
+  <nav class="d-flex flex-wrap gap-1" aria-label="Navegación principal">
+    <a class="nav-link ${seccion eq 'inicio' ? 'active' : ''}" href="${pageContext.request.contextPath}/">Inicio</a>
+    <a class="nav-link ${seccion eq 'promedio' ? 'active' : ''}" href="${pageContext.request.contextPath}/SvPromedio">Promedio</a>
+    <a class="nav-link ${seccion eq 'carrito' ? 'active' : ''}" href="${pageContext.request.contextPath}/SvCarrito">Carrito</a>
+    <a class="nav-link ${seccion eq 'acceso' ? 'active' : ''}" href="${pageContext.request.contextPath}/login.jsp">Acceso</a>
+  </nav>
+</div></header>
+<main class="container py-5">
